@@ -11,7 +11,7 @@ $ cabal install idris
 ### if you've got cutting edge GHC, you might need to try
 $ cabal install --allow-newer idris
 
-### but after multiple dead ends sitting on GHC latest (8.10.2) so i bumped down to recommended (8.8.4)
+### but after multiple dead ends sitting on GHC latest (8.10.2) i bumped down to recommended (8.8.4)
 ```
 
 But, among other things, I found I needed to hack a core OSX library:
@@ -36,7 +36,7 @@ about nullability completeness and such (like https://stackoverflow.com/q/584298
 I first thought this was an issue with `gcc` and the standard libraries, and that
 the GHC backend (RTS?) was tangled up with that.
 
-I experimented with ith passing extra C compiler flags to GHC via its settings file, located at
+I experimented with passing extra C compiler flags to GHC via its settings file, located at
 `~/.ghcup/ghc/8.8.4/lib/settings`, reinstalling Idris (repeatedly), to no avail.
 
 But then I realized that my `gcc` _doesn't_ produce those warnings, but my `clang` _does_,
